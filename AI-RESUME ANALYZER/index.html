@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Resume Analyzer</h1>
+            <p>Upload your resume and get instant AI-powered analysis</p>
+        </header>
+        
+        <main>
+            <section class="upload-section">
+                <div class="upload-box" id="upload-box">
+                    <img src="https://img.icons8.com/clouds/100/000000/upload.png" alt="upload icon">
+                    <h2>Drag & Drop your resume here</h2>
+                    <p>or <span class="browse-btn">browse files</span></p>
+                    <input type="file" id="file-input" accept=".pdf,.docx,.doc,.txt" hidden>
+                </div>
+                <p class="file-info" id="file-info">Supported formats: PDF, DOCX, DOC, TXT (Max size: 5MB)</p>
+                <button class="analyze-btn" id="analyze-btn" disabled>Analyze Resume</button>
+            </section>
+            <div class="filter-section">
+                <h2>B.Tech Branch Selection</h2>
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="branch">Select B.Tech Branch:</label>
+                        <select id="branch">
+                            <option value="all">All Branches</option>
+                            <option value="cse">Computer Science Engineering</option>
+                            <option value="it">Information Technology</option>
+                            <option value="ece">Electronics & Communication</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="me">Mechanical Engineering</option>
+                            <option value="ce">Civil Engineering</option>
+                            <option value="ch">Chemical Engineering</option>
+                            <option value="bt">Biotechnology</option>
+                        </select>
+                    </div>
+            <section class="analysis-section" id="analysis-section">
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Analyzing your resume...</p>
+                </div>
+                
+                <div class="results" id="results">
+                    <h2>Analysis Results</h2>
+                    
+                    <div class="result-card">
+                        <h3>Summary</h3>
+                        <div class="result-content" id="summary-result">
+                            <java,dsa,javascript,html,css,python,c/c++,node.js,react,ruby>
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>Key Skills</h3>
+                        <div class="result-content" id="skills-result">
+                            <Programming Languages (e.g., Python, Java, C++)
+                            Web Development (HTML, CSS, JavaScript)
+                            Data Analysis (Excel, SQL, R, Tableau)
+                            Machine Learning (TensorFlow, Scikit-learn)
+                            Cloud Computing (AWS, Azure, Google Cloud)
+                            Cybersecurity (Network Security, Ethical Hacking)
+                            Software Development (Agile, Scrum)>
+                        </div>
+                    </div>
+                
+                    <div class="result-card">
+                        <h3>Experience Analysis</h3>
+                        <div class="result-content" id="experience-result">
+                            <Use Action Verbs: Start each bullet point with strong action verbs (e.g., developed, analyzed, optimized, collaborated).
+                            Quantify Achievements: Whenever possible, use numbers to quantify your impact (e.g., percentages, dollar amounts, time saved).
+                            Tailor Content: Customize your experience to align with the job description of the position you are applying for.
+                            Highlight Relevant Skills: Emphasize skills that are particularly relevant to the role, such as programming languages, tools, and methodologies.
+                            >
+                        </div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>Improvement Suggestions</h3>
+                        <div class="result-content" id="suggestions-result">
+                            
+                            <If you worked on significant projects, consider adding a separate section for "Key Projects" where you can detail your role, the technologies used, and the outcomes.
+                            Certifications and Training:
+                            
+                            If you have relevant certifications (e.g., AWS Certified Machine Learning, Google Data Analytics), include them in a separate section to bolster your qualifications.
+                            Professional Development:
+                            
+                            Mention any workshops, conferences, or online courses you’ve completed that are relevant to AI and data analysis.
+                            Publications and Presentations:
+                            
+                            If you have published papers or given presentations at conferences, include these to showcase your thought leadership in the field.
+                            Volunteer Experience:
+                            
+                            If applicable, include any volunteer work related to data analysis or AI, as it demonstrates your passion and commitment to the field.
+                            Example of Enhanced Experience Section
+                            Machine Learning Engineer | Data Solutions Corp.
+                            Remote | March 2022 – Present
+                            
+                            Designed and implemented a recommendation system using collaborative filtering techniques, resulting in a 40% increase in user engagement and a 15% boost in sales.
+                            Collaborated with a team of data scientists to develop predictive models for customer churn, achieving a 20% reduction in churn rates through targeted interventions.
+                            Utilized Python and TensorFlow to optimize model performance, reducing training time by 30% through efficient data preprocessing techniques.></If>
+                            
+                        </div>
+                    </div>
+                    
+                    <button class="new-analysis-btn" id="new-analysis-btn">Analyze Another Resume</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>AI Resume Analyzer &copy; 2023 | Powered by Advanced AI Technology</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

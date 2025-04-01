@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.upload-box {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    border: 2px dashed #3498db;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.upload-box:hover {
+    border-color: #2980b9;
+    background: rgba(52, 152, 219, 0.05);
+}
+
+.upload-box img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.upload-box h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.upload-box p {
+    color: #7f8c8d;
+}
+
+.browse-btn {
+    color: #3498db;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.file-info {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 10px 0 20px;
+}
+
+.analyze-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.analyze-btn:hover {
+    background: #2980b9;
+}
+
+.analyze-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+.analysis-section {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: none;
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(52, 152, 219, 0.1);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.results {
+    display: none;
+}
+
+.results h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.result-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.result-card h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.result-content {
+    color: #34495e;
+    line-height: 1.8;
+}
+
+.result-content ul {
+    padding-left: 20px;
+}
+
+.result-content li {
+    margin-bottom: 8px;
+}
+
+.new-analysis-btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.new-analysis-btn:hover {
+    background: #27ae60;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Drag and drop states */
+.upload-box.dragover {
+    border-color: #2ecc71;
+    background: rgba(46, 204, 113, 0.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .upload-box {
+        height: 200px;
+    }
+    
+    .upload-section, .analysis-section {
+        padding: 20px;
+    }
+}
+
+/* Skill tag styling */
+.skill-tag {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 5px;
+}
+
+/* Suggestions styling */
+.suggestion-item {
+    background: #fff8e1;
+    border-left: 3px solid #ffc107;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+/* Animation for results appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Error message styling */
+.error-message {
+    color: #e74c3c;
+    padding: 10px;
+    border-left: 3px solid #e74c3c;
+    background-color: rgba(231, 76, 60, 0.1);
+    margin: 10px 0;
+}
+
+/* Fallback content when API fails */
+.result-content .error-message {
+    font-style: italic;
+} 
