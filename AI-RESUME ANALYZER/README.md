@@ -75,4 +75,4 @@ MIT License
 
 ## Author
 
-Your Name 
+Surendra Rana
